@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageVersion>0.0.1</PackageVersion>
+    <Title>ShieldTech.Validations</Title>
+    <Authors>Adriano Oliveira</Authors>
+    <Copyright>MIT</Copyright>
+    <PackageProjectUrl>https://github.com/drprado2/ShieldTech.Validations</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/drprado2/ShieldTech.Validations/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/drprado2/ShieldTech.Validations</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="8.6.2" />
+    <PackageReference Include="ShieldTech.MethodExtensions" Version="0.0.1" />
+  </ItemGroup>
+
+</Project>
