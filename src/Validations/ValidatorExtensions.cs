@@ -14,7 +14,7 @@ namespace ShieldTech.Validations.Validations
         public static void ApplyValidations(this IValidator validator, ValidationResult validation)
         {
             if (!validation.IsValid)
-                validation.Errors.ToList().ForEach(x => validator.Add(x.PropertyName, x.ErrorMessage));
+                validation.Errors.ToList().ForEach(x => validator.Add(x.ErrorCode, x.ErrorMessage));
         }
         
         public static void ApplyValidations(this IValidator validator, params ValidationResult[] validations)
