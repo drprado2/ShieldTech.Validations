@@ -8,7 +8,7 @@ namespace ShieldTech.Validations.Validations
     {
         public static void ApplyValidations(this IValidator validator, IList<ValidationResult> validations)
         {
-            validations.Where(x => !x.IsValid).SelectMany(x => x.Errors).ToList().ForEach(x => validator.Add(x.PropertyName, x.ErrorMessage));
+            validations.Where(x => !x.IsValid).SelectMany(x => x.Errors).ToList().ForEach(x => validator.Add(x.ErrorCode, x.ErrorMessage));
         }
 
         public static void ApplyValidations(this IValidator validator, ValidationResult validation)
@@ -19,7 +19,7 @@ namespace ShieldTech.Validations.Validations
         
         public static void ApplyValidations(this IValidator validator, params ValidationResult[] validations)
         {
-            validations.Where(x => !x.IsValid).SelectMany(x => x.Errors).ToList().ForEach(x => validator.Add(x.PropertyName, x.ErrorMessage));
+            validations.Where(x => !x.IsValid).SelectMany(x => x.Errors).ToList().ForEach(x => validator.Add(x.ErrorCode, x.ErrorMessage));
         }
 
         public static IList<Error> CastToErrors(this IValidator validator)
